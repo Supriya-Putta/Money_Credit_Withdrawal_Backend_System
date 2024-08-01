@@ -1,5 +1,4 @@
-from . import registration
-
+from  registration import Registration
 
 class moneyCreditWithdrawlSystem:
     # Constructor method __init__ for initializing the object
@@ -22,12 +21,12 @@ class moneyCreditWithdrawlSystem:
                 if self.entrance_retry != 3:
                     print(f"Please enter only numeric values. Your input {str(e).split()[-1]} is not valid")   
                 self.entrance_process_init()                  
-                return False
-          
+                return True
             if self.enter_process == 1:
                 print("Navigating to Registration")
-                registration_obj = registration.Registration()
+                registration_obj = Registration()
                 registration_obj.collecting_registration_inputs()
+                
             elif self.enter_process == 2:
                 print("Navigating to Login")
             else :
