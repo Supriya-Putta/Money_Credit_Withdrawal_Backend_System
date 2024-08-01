@@ -23,7 +23,7 @@ def validate_age(age):
     if  not age.isdigit():
       raise ValidationError
     age=int(age)    
-    if age < 0 or (18 < age <100):
+    if age < 0 and (18 < age <100):
      print(f"Age {age} is valid")
     else :
         raise ValidationError
