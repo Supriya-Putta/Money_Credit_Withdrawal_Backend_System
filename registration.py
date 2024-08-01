@@ -10,3 +10,11 @@ class Registration:
         last_name=input("Please enter your last name: ")
         data_validation.validation_name(last_name)
         print(first_name, last_name)
+        
+        try :
+                age = input("Please enter your age: ")
+                data_validation.validate_age(age)
+                
+        except data_validation.ValidationError as e:
+                print(f"Error: {e}. Please try again. Age must be a numeric value. and it should be positive value.")
+        
