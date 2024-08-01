@@ -16,5 +16,8 @@ class Registration:
                 data_validation.validate_age(age)
                 
         except data_validation.ValidationError as e:
-                print(f"Error: {e}. Please try again. Age must be a numeric value. and it should be positive value.")
+                print(f"""Error: {e}. Please try again. 
+                      Age must be a numeric value. 
+                      and it should be positive value 
+                      and above 18 and below 100.""")
         
